@@ -1,0 +1,17 @@
+{
+  "name": "sequalize-prac",
+  "version": "1.0.0",
+  "description": "Practice Sequelize",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "author": "Hasnain Asif",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.20.1"
+  }
+}
