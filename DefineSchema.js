@@ -25,6 +25,11 @@ const User = sequelize.define(
       validate: {
         len: [2, 8],
       },
+      //// GETTER FUNCTION - username will be uppercased when we will try to fetch it
+      get() {
+        const rawValue = this.getDataValue('username');
+        return rawValue.toUpperCase();
+      },
     },
     password: {
       type: DataTypes.STRING,

@@ -1,10 +1,11 @@
 const { User } = require('../DefineSchema');
 const { runQuery } = require('../Utils/RunQuery');
+const userQuery = runQuery(User);
 
 //////////////////////////////////////// CREATE SINGLE RECORD
 
 // //// Create a user by creating its instance
-// runQuery(User, async () => {
+// userQuery(async () => {
 //   const user = User.build({
 //     username: 'asssddd',
 //     password: '123456',
@@ -18,8 +19,8 @@ const { runQuery } = require('../Utils/RunQuery');
 //   console.log({ newUser: newUser.toJSON() }); // or console.log(newUser.dataValues);
 // });
 
-// //// Another way to create single user
-// runQuery(User, async () => {
+// // //// Another way to create single user
+// userQuery(async () => {
 //   const newUser = await User.create({
 //     username: 'zxc',
 //     password: '123456',
@@ -31,18 +32,18 @@ const { runQuery } = require('../Utils/RunQuery');
 
 //////////////////////////////////////// CREATE BULK RECORD
 // // create Multiple users simultaneously
-// runQuery(User, async () => {
+// userQuery(async () => {
 //   const neeUsers = await User.bulkCreate(
 //     [
 //       {
-//         username: 'Abdullah',
+//         username: 'ghjh',
 //         password: '123',
-//         age: '13',
+//         age: '25',
 //       },
 //       {
-//         username: 'Hamza',
+//         username: 'hgff',
 //         password: '123',
-//         age: '14',
+//         age: '25',
 //       },
 //     ],
 //     {
@@ -57,7 +58,7 @@ const { runQuery } = require('../Utils/RunQuery');
 // });
 
 //////////////////////////////////////// UPDATE AND DELETE A RECORD
-// runQuery(User, async () => {
+// userQuery(async () => {
 //   const newUser = await User.create({
 //     username: 'cvxbcxb',
 //     password: '123456',

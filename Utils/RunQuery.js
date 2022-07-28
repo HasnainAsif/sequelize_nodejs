@@ -1,4 +1,4 @@
-const runQuery = (Model, cb) => {
+const runQuery = (Model) => (cb) => {
   Model.sync({ alter: true, logging: false })
     .then(async (res) => {
       // alter: true will apply alter queries on table to match model
@@ -7,7 +7,7 @@ const runQuery = (Model, cb) => {
       await cb();
     })
     .catch((err) => {
-      console.log('ERRORRRRRRRRR: ', err);
+      console.log('ERRORRRRRRRRR: ', err.message);
     });
 };
 
