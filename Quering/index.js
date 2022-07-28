@@ -5,17 +5,18 @@ const { runQuery } = require('../Utils/RunQuery');
 const userQuery = runQuery(User);
 
 /////////////////////////////// findAll with different variations
-// userQuery(async () => {
-//   // select * FROM "user"
-//   //   const users = await User.findAll(); // return additional with useful information
-//   //   users.forEach((user) => {
-//   //     console.log(user.toJSON());
-//   //   });
-//   //
-//   // no need to add loop and add toJSON into returned values
-//   const rawUsers = await User.findAll({ raw: true }); // return only useful information
-//   console.log(rawUsers);
-// });
+userQuery(async () => {
+  // // select * FROM "user"
+  // const users = await User.findAll(); // return additional with useful information
+  // users.forEach((user) => {
+  //   console.log(user.toJSON());
+  // });
+  //
+  // // no need to add loop and add toJSON into returned values
+  // // this method will not apply getter functions
+  // const rawUsers = await User.findAll({ raw: true }); // return only useful information
+  // console.log(rawUsers);
+});
 
 //   // select "username", "password" FROM "user"
 //   const users = await User.findAll({ attributes: ['username', 'password'] });
@@ -157,7 +158,7 @@ userQuery(async () => {
   // const user = await User.findOne();
   // console.log(user.toJSON());
   //
-  // SELECT * FROM "user" WHERE ("age" <= 25 OR "age" IS NULL) LIMIT 1;
+  // // SELECT * FROM "user" WHERE ("age" <= 25 OR "age" IS NULL) LIMIT 1;
   // const user = await User.findOne({
   //   where: {
   //     age: {
